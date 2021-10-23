@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license !== 'No License') {
-    let license = license.replace(/\s/g, '%20');
+    license = license.replace(/\s/g, '%20');
     return `[License](https://img.shields.io/badge/license-${license}-blue.svg)`;
   };
   return '';
@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license !== 'No License') {
-    let license = license.replace(/\s/g, '%20');
+    license = license.replace(/\s/g, '%20');
     return `This project is licensed under ${license}`;
   };
   return 'No License';
@@ -31,14 +31,20 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data)
-  return `# ${data.title}
-  ## Description 
+  return ` ${renderLicenseBadge(data.license)}
+  # ${data.title}
+  ## Table of Contents
+  <ol>
+  <li>[Description](#Project Description)</li>
+  <li>[Installation](#Installation)</li>
+  <li>[Licensing](#Licensing)</li>
+  </ol>
+  ## Project Description 
   ${data.description}
   ## Installation
   ${data.installation}
   ## Licensing
   ${renderLicenseSection(data.license)}
-  \n ${renderLicenseBadge(data.license)}
   \n ${renderLicenseLink(data.license)}
 `;
 }
