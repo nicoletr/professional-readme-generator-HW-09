@@ -40,6 +40,16 @@ const questions =
             name: 'license',
             choices: ['Apache 2.0','BSD 3-Clause', 'BSD 2-Clause', 'GPL', 'LGPL', 'MIT', 'Mozilla Public', 'Common Development and Distribution', 'Eclipse Public', 'No License']
         },
+        {
+            type:'input',
+            message: 'What is your GitHub username?',
+            name: 'username',
+        },
+        {
+            type:'input',
+            message: 'What is your email address?',
+            name: 'email',
+        },
     ])
     .then ((response) => {
         let fileName = `${response.title}README.md`;

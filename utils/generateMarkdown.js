@@ -1,28 +1,28 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 function renderLicenseBadge(license) {
   if(license !== 'No License'){
-    license = license.replace(/\s/g, '%20');
+    license = license.replace(/\s/g, '_').replace('-','--');
     return `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
   };
   return '';
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link
+// If there is no license, returns an empty string
 function renderLicenseLink(license) {
   if(license !== 'No License') {
-    license = license.replace(/\s/g, '%20');
+    license = license.replace(/\s/g, '_').replace('-','--');
     return `[License](https://img.shields.io/badge/license-${license}-blue.svg)`;
   };
   return '';
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README
+// If there is no license, returns an empty string
 function renderLicenseSection(license) {
   if(license !== 'No License') {
-    license = license.replace(/\s/g, '%20');
+    license = license.replace(/\s/g, '_').replace('-','--');
     return `This project is licensed under ${license}`;
   };
   return 'No License';
@@ -34,15 +34,24 @@ function generateMarkdown(data) {
   return ` ${renderLicenseBadge(data.license)}
   # ${data.title}
   ## Table of Contents
-  <ol>
-  <li>[Description](#Project Description)</li>
-  <li>[Installation](#Installation)</li>
-  <li>[Licensing](#Licensing)</li>
-  </ol>
+
+  * [Description](##project-description)
+  * [Installation](#Installation)
+  * [Licensing](#Licensing)
+
   ## Project Description 
   ${data.description}
   ## Installation
   ${data.installation}
+  ## Usage
+  ${data.usage}
+  ## Contributon
+  ${data.contribution}
+  ## Tests
+  ${data.tests}
+  ## Questions
+  ${data.username}
+  ${data.email}
   ## Licensing
   ${renderLicenseSection(data.license)}
   \n ${renderLicenseLink(data.license)}

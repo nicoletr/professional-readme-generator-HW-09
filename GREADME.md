@@ -1,16 +1,16 @@
- ![License](https://img.shields.io/badge/license-BSD%203-Clause-blue.svg)
+ ![License](https://img.shields.io/badge/license-LGPL-blue.svg)
   # g
   ## Table of Contents
-  <ol>
-  <li>[Description](#Project Description)</li>
-  <li>[Installation](#Installation)</li>
-  <li>[Licensing](#Licensing)</li>
-  </ol>
+
+    1. [Description](#project-description)
+    2. [Installation](#Installation)
+    3. [Licensing](#Licensing)
+
   ## Project Description 
   g
   ## Installation
   g
   ## Licensing
-  This project is licensed under BSD%203-Clause
+  This project is licensed under LGPL
   
- [License](https://img.shields.io/badge/license-BSD%203-Clause-blue.svg)
+ [License](https://img.shields.io/badge/license-LGPL-blue.svg)
