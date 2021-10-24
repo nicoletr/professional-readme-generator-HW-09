@@ -31,7 +31,12 @@ const questions =
         },
         {
             type:'input',
-            message: 'What tests are used?',
+            message: 'If you would like to provide any credits, enter here. If no credits, please leave blank.',
+            name: 'credits',
+        },
+        {
+            type:'input',
+            message: 'What are the test instructions?',
             name: 'tests'
         },
         {
@@ -52,9 +57,10 @@ const questions =
         },
     ])
     .then ((response) => {
-        let fileName = `${response.title}-README.md`;
+        let fileName = `README.md`;
         let data = generateMarkdown(response);
         writeToFile(data, fileName);
+        console.log(response)
     });
 
 // Function to write the README file

@@ -41,8 +41,24 @@ function renderLicenseSection(license) {
         link = 'https://opensource.org/licenses/EPL-2.0';
         break;
     }
-    return `This project is licensed under [${license}](${link})`;
+    return `##Licensing \n This project is licensed under [${license}](${link})`;
   }
+  return '';
+};
+
+//Function to render credits section of README
+function renderCreditsSection(credits) {
+  if(credits !== ''){
+    return `## Credits \n ${credits}`;
+  };
+  return '';
+};
+
+//Function to render credits part of table of contents
+function renderContentsCredits(credits) {
+  if(credits !== ''){
+    return `* [Credits](#credits)`;
+  };
   return '';
 };
 
@@ -51,28 +67,29 @@ function generateMarkdown(data) {
   return `# ${data.title}
   \n${renderLicenseBadge(data.license)}
   ## Table of Contents
-  * [Description](#project-description)
+  * [Description](#description)
   * [Installation](#installation)
-  * [Usage](#how-to-use)
-  * [How To Contribute](#how-to-contribute)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  ${renderContentsCredits(data.credits)}
   * [Tests](#tests)
   * [Questions](#questions)
   * [Licensing](#licensing)
-  ## Project Description 
+  ## Description 
   ${data.description}
   ## Installation
   ${data.installation}
-  ## How To Use
+  ## Usage
   ${data.usage}
-  ## How To Contribute
+  ## Contributing
   ${data.contribution}
+  ${renderCreditsSection(data.credits)}
   ## Tests
   ${data.tests}
   ## Questions
-  For any questions contact me at
+  For any additional questions, you can reach me at:
   \n GitHub: [${data.username}](https://github.com/${data.username})
   \n Email: [${data.email}](mailto:${data.email})
-  ## Licensing
   ${renderLicenseSection(data.license)}
 `;
 };
