@@ -32,8 +32,8 @@ To contribute to this repo, follow the below steps:
 5. Wait for approvals, comments, and/or change requests
 ```
 ## Demonstration
-Watch a demo on how to use the application [here](https://watch.screencastify.com/v/42BX76TMQecepxtYAdIa)<br>
-Check out a sample README [here](https://github.com/nicoletr/professional-readme-generator-HW-09/blob/main/Amazing%20Project-README.md)
+Watch a demo on how to use the application [here](https://watch.screencastify.com/v/lYDwX9JUg1V2n9dFHYzj)<br>
+Check out a sample README [here](https://github.com/nicoletr/professional-readme-generator-HW-09/blob/main/Sample-README.md)
 
 ## Questions
 For any additional questions, you can reach me at:<br>
