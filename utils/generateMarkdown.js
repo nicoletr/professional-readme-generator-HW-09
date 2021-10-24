@@ -12,9 +12,37 @@ function renderLicenseBadge(license) {
 // If there is no license, returns an empty string
 function renderLicenseLink(license) {
   if(license !== 'No License') {
-    license = license.replace(/\s/g, '_').replace('-','--');
-    return `[License](https://img.shields.io/badge/license-${license}-blue.svg)`;
-  };
+    switch (license) {
+      case 'Apache 2.0':
+        link = 'https://opensource.org/licenses/Apache-2.0';
+        break;
+      case 'BSD 3-Clause':
+        link = 'https://opensource.org/licenses/BSD-3-Clause';
+        break;
+      case 'BSD 2-Clause':
+        link = 'https://opensource.org/licenses/BSD-2-Clause';
+        break;
+      case 'GPL':
+        link = 'https://opensource.org/licenses/gpl-license';
+        break;
+      case 'LGPL':
+        link = 'https://opensource.org/licenses/lgpl-license';
+        break;
+      case 'MIT':
+        link = 'https://opensource.org/licenses/MIT';
+        break;
+      case 'Mozilla Public 2.0':
+        link = 'https://opensource.org/licenses/MPL-2.0';
+        break;
+      case 'Common Development and Distribution':
+        link = 'https://opensource.org/licenses/CDDL-1.0';
+        break;
+      case 'Eclipse Public 2.0':
+        link = 'https://opensource.org/licenses/EPL-2.0';
+        break;
+    }
+    return link;
+  }
   return '';
 };
 
@@ -34,7 +62,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Description](#project-description)
   * [Installation](#installation)
-  * [Usage](#usage)
+  * [Usage](#how-to-use)
   * [How To Contribute](#how-to-contribute)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -43,7 +71,7 @@ function generateMarkdown(data) {
   ${data.description}
   ## Installation
   ${data.installation}
-  ## Usage
+  ## How To Use
   ${data.usage}
   ## How To Contribute
   ${data.contribution}

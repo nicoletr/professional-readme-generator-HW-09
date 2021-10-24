@@ -38,7 +38,7 @@ const questions =
             type:'list',
             message: 'Which license have you used?',
             name: 'license',
-            choices: ['Apache 2.0','BSD 3-Clause', 'BSD 2-Clause', 'GPL', 'LGPL', 'MIT', 'Mozilla Public', 'Common Development and Distribution', 'Eclipse Public', 'No License']
+            choices: ['Apache 2.0','BSD 3-Clause', 'BSD 2-Clause', 'GPL', 'LGPL', 'MIT', 'Mozilla Public 2.0', 'Common Development and Distribution', 'Eclipse Public 2.0', 'No License']
         },
         {
             type:'input',
