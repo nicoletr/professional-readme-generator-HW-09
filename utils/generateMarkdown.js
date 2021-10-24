@@ -22,22 +22,24 @@ function renderLicenseLink(license) {
 // If there is no license, returns an empty string
 function renderLicenseSection(license) {
   if(license !== 'No License') {
-    license = license.replace(/\s/g, '_').replace('-','--');
     return `This project is licensed under ${license}`;
   };
   return 'No License';
 };
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data)
   return ` ${renderLicenseBadge(data.license)}
   # ${data.title}
   ## Table of Contents
 
-  * [Description](##project-description)
-  * [Installation](#Installation)
-  * [Licensing](#Licensing)
+  * [Description](#project-description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [Licensing](#licensing)
 
   ## Project Description 
   ${data.description}
@@ -50,8 +52,9 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   ## Questions
-  ${data.username}
-  ${data.email}
+  For any questions contact me at
+  \n GitHub: [${data.username}](https://github.com/${data.username})
+  \n Email: [${data.email}](mailto:${data.email})
   ## Licensing
   ${renderLicenseSection(data.license)}
   \n ${renderLicenseLink(data.license)}
