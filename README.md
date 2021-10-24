@@ -32,7 +32,8 @@ To contribute to this repo, follow the below steps:
 5. Wait for approvals, comments, and/or change requests
 ```
 ## Demonstration
-Watch a demo on how to use the application [here]()
+Watch a demo on how to use the application [here](https://watch.screencastify.com/v/42BX76TMQecepxtYAdIa)<br>
+Check out a sample README [here]()
 
 ## Questions
 For any additional questions, you can reach me at:<br>
