@@ -2,12 +2,12 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// List of questions
+// List of questions to fill fields in README
 const questions =
     inquirer.prompt ([
         {
             type:'input',
-            message: 'What is your title?',
+            message: 'What is the title of your project?',
             name: 'title'
         },
         {
@@ -36,7 +36,7 @@ const questions =
         },
         {
             type:'list',
-            message: 'Which license have you used?',
+            message: 'Which license would you like to use?',
             name: 'license',
             choices: ['Apache 2.0','BSD 3-Clause', 'BSD 2-Clause', 'GPL', 'LGPL', 'MIT', 'Mozilla Public 2.0', 'Common Development and Distribution', 'Eclipse Public 2.0', 'No License']
         },
@@ -52,7 +52,7 @@ const questions =
         },
     ])
     .then ((response) => {
-        let fileName = `README.md`;
+        let fileName = `${response.title}-README.md`;
         let data = generateMarkdown(response);
         writeToFile(data, fileName);
     });

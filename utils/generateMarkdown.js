@@ -8,9 +8,9 @@ function renderLicenseBadge(license) {
   return '';
 };
 
-// Function that returns the license link
+// Function that returns the license section and link
 // If there is no license, returns an empty string
-function renderLicenseLink(license) {
+function renderLicenseSection(license) {
   if(license !== 'No License') {
     switch (license) {
       case 'Apache 2.0':
@@ -41,24 +41,15 @@ function renderLicenseLink(license) {
         link = 'https://opensource.org/licenses/EPL-2.0';
         break;
     }
-    return link;
+    return `This project is licensed under [${license}](${link})`;
   }
   return '';
 };
 
-// Function that returns the license section of README
-// If there is no license, returns an empty string
-function renderLicenseSection(license) {
-  if(license !== 'No License') {
-    return `This project is licensed under ${license}`;
-  };
-  return 'No License';
-};
-
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  return ` ${renderLicenseBadge(data.license)}
-  # ${data.title}
+  return `# ${data.title}
+  \n${renderLicenseBadge(data.license)}
   ## Table of Contents
   * [Description](#project-description)
   * [Installation](#installation)
@@ -83,7 +74,6 @@ function generateMarkdown(data) {
   \n Email: [${data.email}](mailto:${data.email})
   ## Licensing
   ${renderLicenseSection(data.license)}
-  \n ${renderLicenseLink(data.license)}
 `;
 };
 
