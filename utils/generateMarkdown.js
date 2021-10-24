@@ -41,7 +41,7 @@ function renderLicenseSection(license) {
         link = 'https://opensource.org/licenses/EPL-2.0';
         break;
     }
-    return `##Licensing \n This project is licensed under [${license}](${link})`;
+    return `## Licensing \nThis project is licensed under [${license}](${link})`;
   }
   return '';
 };
@@ -49,7 +49,7 @@ function renderLicenseSection(license) {
 //Function to render credits section of README
 function renderCreditsSection(credits) {
   if(credits !== ''){
-    return `## Credits \n ${credits}`;
+    return `## Credits  \n${credits}`;
   };
   return '';
 };
@@ -65,7 +65,7 @@ function renderContentsCredits(credits) {
 // Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  \n${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge(data.license)}
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -87,11 +87,10 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   ## Questions
-  For any additional questions, you can reach me at:
-  \n GitHub: [${data.username}](https://github.com/${data.username})
-  \n Email: [${data.email}](mailto:${data.email})
-  ${renderLicenseSection(data.license)}
-`;
+  For any additional questions, you can reach me at:<br>
+  * GitHub: [${data.username}](https://github.com/${data.username})<br>
+  * Email: [${data.email}](mailto:${data.email})
+  ${renderLicenseSection(data.license)}`;
 };
 
 module.exports = generateMarkdown;

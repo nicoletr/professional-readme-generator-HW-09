@@ -57,10 +57,9 @@ const questions =
         },
     ])
     .then ((response) => {
-        let fileName = `README.md`;
+        let fileName = `${response.title}-README.md`;
         let data = generateMarkdown(response);
         writeToFile(data, fileName);
-        console.log(response)
     });
 
 // Function to write the README file
