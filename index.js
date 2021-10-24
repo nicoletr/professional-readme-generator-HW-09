@@ -52,7 +52,7 @@ const questions =
         },
     ])
     .then ((response) => {
-        let fileName = `${response.title}README.md`;
+        let fileName = `README.md`;
         let data = generateMarkdown(response);
         writeToFile(data, fileName);
     });
