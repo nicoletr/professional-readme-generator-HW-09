@@ -33,7 +33,7 @@ To contribute to this repo, follow the below steps:
 ```
 ## Demonstration
 Watch a demo on how to use the application [here](https://watch.screencastify.com/v/42BX76TMQecepxtYAdIa)<br>
-Check out a sample README [here]()
+Check out a sample README [here](https://github.com/nicoletr/professional-readme-generator-HW-09/blob/main/Amazing%20Project-README.md)
 
 ## Questions
 For any additional questions, you can reach me at:<br>
